@@ -85,7 +85,7 @@ function App(): JSX.Element {
 			 }
 	 ]
 	);
-	console.log("Our pretties 😻: ", cats);
+
 	return (
 		<>
 			<Navbar />

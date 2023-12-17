@@ -1,3 +1,4 @@
+import cats from "../App"
 import Cat from "../data/cat"
 import CatDisplay from "./cat_display"
 
@@ -9,9 +10,9 @@ const CatCard : React.FC<CatsList> = ({catsList}) =>
   {
     return (
       <>
-      {catsList.map((cat, index)=> 
-        <CatDisplay catDisplay={cat} key={index}/>
-       )
+      {catsList.map((cat, index)=> (
+        <CatDisplay key={index} index={index} catDisplay={cat}/>
+       ))
       };
       </>
     )
