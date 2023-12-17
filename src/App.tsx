@@ -93,7 +93,7 @@ function App(): JSX.Element {
 
 			<main>
 				<div className='cards__wrapper'>
-					<CatCard/>
+					<CatCard catsList={cats}/>
 		
 				</div>
 			</main>
