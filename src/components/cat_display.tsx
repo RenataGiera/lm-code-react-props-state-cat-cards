@@ -123,15 +123,17 @@ const CatDisplay : React.FC <CatDisplayProps> = ({catDisplay, index}) => {
   return (
     <>
     <div className="card">
-      <CatImage image={images[index].image}
-                altText={images[index].altText}
-                licenceType={images[index].licenceType}
-			          licenceUrl={images[index].licenceUrl}
-                attributionName={images[index].attributionName}
-                attributionUrl={images[index].attributionUrl}
-      />
+			{index < images.length && (
+				<CatImage image={images[index].image}
+									altText={images[index].altText}
+									licenceType={images[index].licenceType}
+									licenceUrl={images[index].licenceUrl}
+									attributionName={images[index].attributionName}
+									attributionUrl={images[index].attributionUrl}
+				/>
+			)}
       <h3 className="card__text card__header">{catDisplay.name}</h3>
-      <p className="card__text">Index: {index}</p>
+      <p className="card__text">Index: {index+1}</p>
       <p className="card__text">Species: {catDisplay.species}</p>
       <p className="card__text">Favourite Food(s): {catDisplay.favFoods.join(', ')}</p>
       <p className="card__text">Birth Year: {catDisplay.birthYear}</p>
