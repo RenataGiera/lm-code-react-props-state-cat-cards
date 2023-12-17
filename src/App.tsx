@@ -4,6 +4,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import { useState } from 'react';
 import Cat from './data/cat'
+import CatCard from './components/cat_card';
 
 
 function App(): JSX.Element {
@@ -91,7 +92,9 @@ function App(): JSX.Element {
 			<Header />
 
 			<main>
-				<div className='cards__wrapper'>{/* JSX code can go here */}
+				<div className='cards__wrapper'>
+					<CatCard/>
+		
 				</div>
 			</main>
 
