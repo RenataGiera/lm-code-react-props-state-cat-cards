@@ -13,8 +13,9 @@ const CatCard : React.FC<CatsList> = ({catsList}) => {
       <>
       {catsList.map((cat, index)=> (
         <CatDisplay key={index} index={index} catDisplay={cat}/>
+      
        ))
-      }
+      };
       </>
       
     )
